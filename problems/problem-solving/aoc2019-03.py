@@ -20,7 +20,12 @@ def part1(wire1, wire2):
     """
 
     ### Replace with your code
-    return None
+    # pointsw1 = {point: None for point in wire1}
+    # points = {}
+    # for point in wire2:
+    #     if point in pointsw1:
+            
+
 
 
 def part2(wire1, wire2):

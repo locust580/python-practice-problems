@@ -20,8 +20,15 @@ def part1(orbits):
     Returns an integer
     """
     ### Replace with your code
-    return None
-
+    cache = {}
+    for thing in orbits:
+        if thing not in cache:
+            cache[thing] = 0
+            curr = orbits[thing]
+            while curr != "COM":
+                cache[thing] += 1
+                curr = orbits[curr]
+    return sum(cache.values())
 
 def part2(orbits):
     """

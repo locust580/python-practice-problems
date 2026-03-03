@@ -6,8 +6,21 @@ def sublists(lst):
     
     Returns: (list of list of values) list of all sublists of lst.
     """
+    outlst = [[]]
+    if len(lst) == 0:
+        return [[]]
+    if len(lst) == 1:
+        return [lst]
+    else:
+        # for item in sublists(lst[1:]):
+        #     outlst.append(lst[0] + item)
+        # for item in sublists(lst[:-1]):
+        #     outlst.append(item + lst[-1])
+        outlst.append([lst[0]].append(sublists(lst[1:])))
+        outlst.append(sublists(lst[:-1]).append([lst[-1]]))
+    print(outlst)
+    return outlst
 
-    pass
 
 
 #############################################################
